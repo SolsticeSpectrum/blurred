@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="1920px" height="1080px"><metadata><?xpacket begin="" id=""?><x:xmpmeta xmlns:x="adobe:ns:meta/"><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:Description rdf:about="" xmlns:xapRights="http://ns.adobe.com/xap/1.0/rights/"><xapRights:Marked>True</xapRights:Marked></rdf:Description><rdf:Description rdf:about="" xmlns:xapRights="http://ns.adobe.com/xap/1.0/rights/"><xapRights:WebStatement rdf:resource="http://www.xmple.com/wallpaper/checkered-black-white-squares-1920x1080-c2-000000-f0f8ff-l-240-a-315-f-2-image/"/></rdf:Description><rdf:Description rdf:about="" xmlns:xapRights="http://ns.adobe.com/xap/1.0/rights/"><xapRights:UsageTerms><rdf:Alt><rdf:li xml:lang="en">This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"&gt;Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License&lt;/a&gt;.</rdf:li></rdf:Alt></xapRights:UsageTerms></rdf:Description><rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:title><rdf:Alt><rdf:li xml:lang="en">checkered black white squares alice blue 1920x1080 #000000 #f0f8ff diagonal 315° 240px</rdf:li></rdf:Alt></dc:title></rdf:Description><rdf:Description rdf:about="" xmlns:cc="http://creativecommons.org/ns#"><cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/4.0/"/></rdf:Description><rdf:Description rdf:about="" xmlns:cc="http://creativecommons.org/ns#"><cc:attributionName>xmple.com</cc:attributionName></rdf:Description><rdf:Description rdf:about="" xmlns:cc="http://creativecommons.org/ns#"><cc:morePermissions rdf:resource="http://www.xmple.com"/></rdf:Description></rdf:RDF></x:xmpmeta><?xpacket end="r"?></metadata><title>checkered black white squares alice blue 1920x1080 #000000 #f0f8ff diagonal 315° 240px</title><desc>checkered black white squares alice blue 1920x1080 #000000 #f0f8ff diagonal 315° 240px</desc><style type="text/css"><![CDATA[.x{font:20px verdana;fill:#fff;stroke:#555;stroke-width:20px;opacity:0.35;}.o{stroke:none;opacity:0.01;}]]></style><defs><pattern id="p1" patternUnits="userSpaceOnUse" x="0" y="0" width="480" height="480" patternTransform="translate(960,540) rotate(45 0 0)"><path fill="#000000" d="M0 0h240v240H0zM240 240H480V480H240z"/><path fill="#f0f8ff" d="M240 0H480V240H240zM0 240H240V480H0z"/></pattern></defs><rect width="1920" height="1080" x="0" y="0" fill="url(#p1)"/><path class="x o" d="M5 5h2v1H6v1h1v1H5zM4 3h4v1h1v5H8v1H4V9H3V4h1v5h4V4H4zm7 1h1v2h1V4h1v2h-1v1h1v2h-1V7h-1v2h-1V7h1V6h-1zm4 0h5v5h-1V5h-1v4h-1V5h-1v4h-1zm6 0h3l-1 1h-1v3h1V5l1-1v5h-2v2h-1zm4-2h1v6h1v1h-2zm3 2h3l-1 1h-1v1h1V5l1-1v3h-2v1h2v1h-3V4zm4 4h1v1h-1zm2-4h3v1h-2v3h2v1h-3zm4 0h3v5h-3l1-1h1V5h-1v3l-1 1zm4 0h5v5h-1V5h-1v4h-1V5h-1v4h-1z"/><script xmlns="">{
+            document.currentScript.dataset.injected = true;
+            const o = JSON.parse('{"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0","appVersion":"5.0 (Macintosh)","platform":"MacIntel","vendor":"","product":"Gecko","oscpu":"Mac OS 10.15","userAgentData":"[delete]","productSub":"20100101","buildID":"20181001000000"}');
+
+            for (const key of Object.keys(o)) {
+              if (o[key] === '[delete]') {
+                delete Object.getPrototypeOf(window.navigator)[key];
+              }
+              else {
+                navigator.__defineGetter__(key, () =&gt; {
+                  if (o[key] === 'empty') {
+                    return '';
+                  }
+                  return o[key];
+                });
+              }
+            }
+          }</script></svg>
