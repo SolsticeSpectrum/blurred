@@ -1,6 +1,6 @@
 <h1 align="center">blurred dotfiles</h1>
 
-![img](https://i.imgur.com/fZgBbWO.png)
+![img](https://i.imgur.com/Xn6tJNE.png)
 
 ![img](https://i.imgur.com/45gz3Gx.png)
 
