@@ -1,7 +1,7 @@
-desktop-image: "background.jpg"
+desktop-image: "background.png"
 
 title-text:" "
-message-color: "#FFFFFF"
+message-color: "#757575"
 terminal-left: "0"
 terminal-top: "0"
 terminal-width: "100%"
@@ -11,7 +11,7 @@ terminal-border: "0"
 +label {
   text = "Hello, welcome to Grub"
   font = "Poppins Regular 48"
-  color = "#FFFFFF"
+  color = "#888"
   left = 25%
   top = 15%
   height = 20
@@ -22,7 +22,7 @@ terminal-border: "0"
 +label {
   text = "choose your operating system"
   font = "Poppins Regular 16"
-  color = "#FFFFFF"
+  color = "#888"
   top = 30%-30
   left = 25%
   align = "center"
