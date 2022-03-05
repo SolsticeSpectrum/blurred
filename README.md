@@ -1,4 +1,4 @@
-<h1 align="center">eternal black dotfiles</h1>
+<h1 align="center">blurred dotfiles</h1>
 
 ![img](https://i.imgur.com/fZgBbWO.png)
 
@@ -51,6 +51,8 @@ Open file /etc/default/grub with your preferred text editor and find the line `#
 into the quotation marks  
 Final result should look like this `GRUB_THEME="/usr/share/grub/themes/sleek/theme.txt"`  
 Save the file and run command `sudo grub-mkconfig -o /boot/grub/grub.cfg`  
+
+In firefox open `about:config` and switch `layout.css.backdrop-filter.enabled` to true
 
 
 ## Steps you should do after installing
