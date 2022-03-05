@@ -18,7 +18,7 @@
 
 ![img](https://i.imgur.com/oPBR7pc.png)
 
-![img](https://i.imgur.com/6XpdwHp.png)
+![img](https://i.imgur.com/8uKxpt5.png)
 
 
 ## Use BetterDiscord and Spicetify at your own risk, these are violations of their terms of services
