@@ -2,16 +2,11 @@
 
  * @name Dark Discord
  * @version 1.0
- * @description An actual dark mode for discord.
+ * @description Pitch black theme for Discord.
  * @source https://github.com/hellbound1337/dark-discord
- * @authorId 426147523305144322
- * @author hellbound
- * @donate https://paypal.me/zzzmario
- * @invite pCc7q4Z
+ * @author DarkReaper231
 
 **/
-
-@import url(https://raw.githack.com/hellbound1337/dark-discord/master/src/source.css);
 
 .theme-dark,
 .theme-light,
@@ -67,11 +62,11 @@
     background-color: #000000 !important;
 }
 
-.contentRegionScroller-26nc1e::-webkit-scrollbar-thumb {
+.contentRegionScroller-2_GT_N::-webkit-scrollbar-thumb {
     background-color: #ffffff !important;
 }
 
-.contentRegionScroller-26nc1e::-webkit-scrollbar-track {
+.contentRegionScroller-2_GT_N::-webkit-scrollbar-track {
     background-color: #000000 !important;
 }
 
