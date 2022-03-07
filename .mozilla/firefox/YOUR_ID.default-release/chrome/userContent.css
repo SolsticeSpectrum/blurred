@@ -64,20 +64,24 @@ input[type="checkbox"]:checked  {
 
 @-moz-document url(about:newtab)  {
   .search-wrapper .search-handoff-button, .search-wrapper input {
-    background: #0c0c0c var(--newtab-search-icon) 16px center no-repeat !important;
+    background: var(--newtab-search-icon) 16px center no-repeat !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(60px);
     color: #888 !important;
     box-shadow: 0 0px 0px transparent, 0 0 0px transparent !important;
     border-radius: 0px !important;
   }
 
   .top-site-outer .tile  {
-    background-color: #0c0c0c !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(60px);
     box-shadow: 0 0px 0px transparent, 0 0 0px transparent !important;
     border-radius: 0px !important;
   }
 
   .top-site-outer .top-site-icon  {
-    background-color: #0c0c0c !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(60px);
   }
 
   .click-target-container *, .top-sites-list *  {
@@ -97,20 +101,24 @@ input[type="checkbox"]:checked  {
 
 @-moz-document url(about:home)  {
   .search-wrapper .search-handoff-button, .search-wrapper input {
-    background: #0c0c0c var(--newtab-search-icon) 16px center no-repeat !important;
+    background: var(--newtab-search-icon) 16px center no-repeat !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(60px);
     color: #888 !important;
     box-shadow: 0 0px 0px transparent, 0 0 0px transparent !important;
     border-radius: 0px !important;
   }
 
   .top-site-outer .tile  {
-    background-color: #0c0c0c !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(60px);
     box-shadow: 0 0px 0px transparent, 0 0 0px transparent !important;
     border-radius: 0px !important;
   }
 
   .top-site-outer .top-site-icon  {
-    background-color: #0c0c0c !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(60px);
   }
 
   .click-target-container *, .top-sites-list *  {
@@ -122,6 +130,8 @@ input[type="checkbox"]:checked  {
   }
 
   .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button  {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(60px);
     border-color: #fff !important;
     border-size: 1px !important;
     border-radius: 0px !important;
@@ -130,7 +140,9 @@ input[type="checkbox"]:checked  {
 
 @-moz-document url(about:privatebrowsing)  {
   .search-handoff-button, .search-handoff-button:active, .search-handoff-button:enabled:hover:active  {
-    background: #0c0c0c var(--newtab-search-icon) 12px center no-repeat !important;
+    background: var(--newtab-search-icon) 12px center no-repeat !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(30px);
     border: solid 1px transparent !important;
     border-radius: 0px !important;
   }
