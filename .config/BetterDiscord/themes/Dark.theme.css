@@ -74,8 +74,64 @@
     background: #000000;
 }
 
-.container-3baos1 {
-    background: #000000;
+.resultsGroup-cfY57t {
+    background: #000000 !important;
+}
+
+.option-ayUoaq.user-1dKxvu::after {
+    background: #000000 !important;
+}
+
+.option-ayUoaq.searchOption-3u1gRt::after {
+    background: #000000 !important;
+}
+
+.option-ayUoaq::after {
+    background: #000000 !important;
+}
+
+.progress-1S-TDF {
+   background-color: #0c0c0c !important;
+}
+
+.notches-2w7UZJ.gray-3wP137 {
+   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='20' fill='%23000000'%3E%3Cpath fill-rule='evenodd' d='M0 0h8v20H0V0zm4 2a2 2 0 00-2 2v12a2 2 0 104 0V4a2 2 0 00-2-2z'/%3E%3C/svg%3E") !important;
+}
+
+.bar-1Bhnl9 {
+   background-color: #0c0c0c !important;
+}
+
+.container-2nx-BQ {
+   background-color: #0c0c0c !important;
+}
+
+.fieldButton-14lHvK {
+   background-color: #0c0c0c !important;
+}
+
+.button-ZJ9ZzX {
+   background-color: #0c0c0c !important;
+}
+
+.button-3M8h3F {
+   background-color: #0c0c0c !important;
+}
+
+.headerClickable-zGQJz3 {
+   background-color: #0c0c0c !important;
+}
+
+.tierHeaderContent-2SPBAA, .tierBody-1d3UiS {
+   background-color: #0c0c0c !important;
+}
+
+.flexCenter-1Mwsxg.flex-3BkGQD.justifyCenter-rrurWZ.alignCenter-14kD11.activeGame-1OdxzI.notDetected-M3Ghh2 {
+    background: #0c0c0c;
+}
+
+.queryContainer-ZunrLZ {
+    background: #000000 !important;
 }
 
 .body-1ld4H7 {
@@ -83,11 +139,15 @@
 }
 
 .peopleColumn-1wMU14 {
-    background: #000000;
+    background: #000000 !important;
 }
 
 .section-2gLsgF {
     background: #000000;
+}
+
+.itemCard-3Etziu {
+    background: #000000 !important;
 }
 
 .theme-dark .root-g14mjS {
@@ -107,5 +167,9 @@
 }
 
 .markup-eYLPri code, .textContainer-36wgKK code {
+    background: #0c0c0c !important;
+}
+
+.bd-switch-body {
     background: #0c0c0c !important;
 }
