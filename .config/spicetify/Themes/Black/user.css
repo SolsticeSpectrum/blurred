@@ -1,627 +1,777 @@
-:root {
-	--bar-height: 90px;
+/* Version 14/10/21 */
+
+.encore-dark-theme .encore-bright-accent-set {
+  --background-highlight: var(--spice-play-button);
+  --background-press: var(--spice-play-button);
+  --background-base: var(--spice-play-button);
+}
+
+/* TOPBAR */
+
+/* fix topbar bug */
+.main-entityHeader-topbarContent.main-entityHeader-topbarContentFadeIn > * {
+  opacity: unset !important;
+}
+
+/* unset colors of history buttons */
+.main-topBar-historyButtons .main-topBar-button {
+  background-color: unset;
+}
+
+/* change appearance of search icon on 'search' tab */
+.x-searchInput-searchInputSearchIcon svg {
+  color: var(--spice-text);
+  height: 17px !important;
+  stroke: var(--spice-text);
+}
+
+/* change appearance of x icon on 'search' tab */
+.x-searchInput-searchInputClearButton {
+  color: var(--spice-text);
+}
+
+[role='searchbox']::placeholder {
+  color: rgba(var(--spice-rgb-text), 0.5);
+}
+
+/* add topbar transition */
+.queue-tabBar-headerItemLink {
+  transition-duration: 0.15s;
+}
+
+/* remove topbar background colour */
+.main-topBar-background {
+  background-color: unset !important;
+}
+
+/* resize play-button on topbar */
+.main-topBar-overlay {
+  background-color: var(--spice-player);
+}
+
+
+.main-topBar-topbarContent .main-playButton-primary {
+  --size: 35px !important;
+}
+
+/* simplify profile menu */
+.main-userWidget-displayName,
+.main-userWidget-notificationIndicator {
+  display: none;
+}
+
+.main-avatar-userIcon {
+  color: white;
+}
+
+.main-userWidget-box {
+  color: var(--spice-subtext);
+  background-color: transparent !important;
+}
+
+.main-userWidget-chevron {
+  display: none;
+}
+
+/* NAVBAR */
+
+/* navbar bug fix */
+ul.main-navBar-entryPoints > div.GlueDropTarget{
+  padding: 0 8px;
+}
+ul.main-navBar-entryPoints > div.GlueDropTarget >* {
+  padding: 0 16px;
+  height: 40px;
+  border-radius: 4px;
+}
+ul.main-navBar-entryPoints > div.GlueDropTarget >*.active {
+  background: var(--spice-card);
+}
+
+/* remove divider gradient */
+.main-rootlist-rootlistDividerGradient {
+  display: none;
+}
+
+/* change color of divider */
+.main-rootlist-rootlistDivider {
+  background-color: rgba(var(--spice-rgb-button-disabled), 0.8);
+}
+
+/* add gradient to navbar */
+.Root__nav-bar {
+  background-image: linear-gradient(
+    to bottom left,
+    var(--spice-sidebar) 0%,
+    var(--spice-player) 100%
+  ) !important;
+}
+
+/* change color of navbar playing icon */
+[aria-label='Playing'] {
+  color: var(--spice-text);
+}
+
+/* change color of navbar icons */
+.main-likedSongsButton-likedSongsIcon {
+  background: var(--spice-text);
+  color: var(--spice-sidebar);
+}
+
+.main-yourEpisodesButton-yourEpisodesIcon {
+  background: var(--spice-text);
+}
+
+.main-yourEpisodesButton-yourEpisodesIcon path {
+  fill: var(--spice-sidebar);
 }
-.sidebar {
---left-sidebar-item-height: 29px !important;
+
+/* remove opacity of navbar buttons */
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-icon, .main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText, .main-createPlaylistButton-button {
+  opacity: unset;
+}
+
+/* change top margin of navbar options */
+.main-navBar-entryPoints > div:first-of-type {
+  margin-top: 20px;
 }
-.resizer-right {
-	background-color: #000;
+/* change colors of active tab */
+.main-navBar-navBarLinkActive {
+  background-color: var(--spice-nav-active);
+}
+
+.main-navBar-navBarLinkActive,
+.main-navBar-navBarLinkActive:focus,
+.main-navBar-navBarLinkActive:hover {
+  color: var(--spice-nav-active-text) !important;
+  transition: none;
 }
 
 
-/*Round corner cover image*/
-.card-image,
-.card-placeholder-wrapper,
-.card-image-content-wrapper,
-.Card:not(.Card--artist) .Card__image,
-.Card:not(.Card--artist) .Card__image-wrapper {
-	border-radius: 10px !important;
-	overflow: hidden !important
+/* PLAYBACK-BAR */
+
+/* shift bar up when connect bar is visible */
+.now-playing-bar-container>div:first-child:nth-last-child(2) .playback-bar, .main-nowPlayingBar-container>div:first-child:nth-last-child(2) .playback-bar {
+  bottom: 107px;
+}
+
+/* revert playback bar position when in full-screen mode */
+._U2P19b627vsKWCNNffn .playback-bar {
+  bottom: auto;
 }
 
-/*Hide some annoying elements like profile name and pic, upgrade button and device connect bar at bottom, new playlist button*/
-.profile.content-top-bar__profile-link,
-.upgrade-button,
-.view-player .remote-playback-bar,
-.LeftSidebarNewPlaylistButton__button {
-	display: none !important;
+/* round cover art when collapsed */
+.main-coverSlotCollapsed-container .cover-art-image {
+  border-radius: 10%;
+  transition-duration: 0.15s;
 }
 
-/*Hide ad banner */
-.ad-container, #view-leaderboard-ad, #view-billboard-ad {
-    display: none !important;
+.main-coverSlotExpandedCollapseButton-collapseButton {
+  right: 10px !important;
+  top: 10px !important;
 }
 
-/*Exclude these elements from draggable property because it stops them from clickable*/
-.profile-items-container,
-.profile {
-	-webkit-app-region: no-drag !important;
+/* hide and move progress time location */
+.playback-bar__progress-time-elapsed {
+  opacity: 0;
+  position: absolute;
+  bottom: 13px;
+  left: 0;
+  transition-duration: 0.15s;
 }
 
-/*Thinner scrollbar*/
-::-webkit-scrollbar {
-	height: 6px !important;
-	width: 6px !important;
-	background-color: transparent;
+.main-playbackBarRemainingTime-container {
+  opacity: 0;
+  position: absolute;
+  bottom: 13px;
+  right: 0;
+  transition-duration: 0.15s;
 }
 
-/*Round corner scrollbar*/
-::-webkit-scrollbar-thumb {
-	border-radius: 3px !important;
+/* show time on hover */
+.playback-bar:hover .playback-bar__progress-time-elapsed,
+.playback-bar:hover .main-playbackBarRemainingTime-container {
+  opacity: 1;
 }
 
-/*Hide top and bottom buttons of scrollbar */
-/*who uses those, lol*/
-::-webkit-scrollbar-button {
-	display: none !important;
+/* move progress bar */
+.playback-bar {
+  width: 100%;
+  bottom: 83px;
+  position: absolute;
 }
 
-/*Hide cover image overlay*/
-.card-overlay {
-	visibility: hidden !important;
+.player-controls__buttons {
+  transform: translateY(3px);
+  align-items: center;
 }
 
-.card-image-hit-area .card-button-add,
-.card-image-hit-area .card-button-play,
-.card-image-hit-area .card-button-more,
-.Card__image-hit-area .card-button-add,
-.Card__image-hit-area .card-button-play,
-.Card__image-hit-area .card-button-more,
-.Card__image-hit-area .Card__play-button,
-.Card__image-hit-area .Card__add-button,
-.Card__image-hit-area .Card__more-button,
-.Card__image-hit-area .Card__overlay  {
-	transition-property: all !important;
-	transition-duration: 0.3s !important;
-	transition-timing-function: cubic-bezier(.3,0,0,1) !important;
-	opacity: 1 !important;
+/* change progress bar color */
+.playback-bar .progress-bar__fg {
+  background-color: var(--spice-playback-bar);
 }
 
-.glue-page-header__content .glue-page-header__image-inner {
-	border-radius: 10px;
-	box-shadow: unset !important;
+/* change appearance of play-button */
+.main-playPauseButton-button {
+  background-color: inherit;
+  color: var(--spice-text);
+  transition-duration: 0.15s !important;
 }
 
-.glue-page-header__full-description-overlay {
-	box-shadow: unset !important;
+.main-playPauseButton-button svg {
+  height: 19px;
+  width: 19px;
 }
 
-.card-placeholder-wrapper {
-	background: transparent !important;
+.main-playPauseButton-button:focus, .main-playPauseButton-button:hover {
+  transform: scale(1) !important;
+  -webkit-transform: scale(1) !important;
 }
 
-/*Spice up search input background*/
-.SearchInput {
-	color: var(--modspotify_main_fg);
+/* change progress bar slider color */
+.progress-bar__slider {
+  background-color: var(--spice-subtext);
 }
-.SearchInput__input {
-	color: var(--modspotify_secondary_fg);
-	background-color: #141414 !important;
-	border-radius: 4px !important;
-	padding-left: 34px;
+
+/* BUDDY FEED */
+
+/* change text color */
+.main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName a,
+.main-buddyFeed-activityMetadata .main-buddyFeed-username a,
+.main-buddyFeed-activityMetadata .main-buddyFeed-playbackContextLink,
+p.main-buddyFeed-timestamp.main-type-finale,
+.main-buddyFeed-findFriendsButton .main-buddyFeed-findFriendsIcon {
+  color: var(--spice-subtext);
 }
 
-.sidebar:hover .sidebar-navbar.sidebar-scroll-element {
-	opacity: 0.4!important;
+/* add gradient */
+.main-buddyFeed-buddyFeed {
+  background-image: linear-gradient(
+    to bottom left,
+    var(--spice-sidebar) 0%,
+    var(--spice-player) 100%
+  ) !important;
 }
 
-.view-player .player-controls-container,
-.view-player .player-controls-container .controls {
-	overflow: visible !important;
+/* hide buddyfeed scrollbar */
+.main-buddyFeed-scrollableArea > .os-scrollbar {
+  display: none;
 }
 
-.view-player .player-controls-container .controls .button-play{
-	height:50px !important;
-	border-radius:50px !important;
-	background-color: #0e0e0e !important;
-	box-shadow:0 0 0 0 !important;
-	width:50px !important;
-	overflow: visible !important;
-	box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
-	transition:none 0.3s cubic-bezier(.3,0,.7,1);
+/* MAIN */
+
+
+/* hide banner ads */
+.main-leaderboardComponent-container {
+  display: none;
 }
 
-.view-player .player-controls-container .controls .button-play:before{
-	font-size:18px !important;
-	padding-left: 16px !important;
-	padding-top: 9px !important;
+.WiPggcPDzbwGxoxwLWFf.contentSpacing {
+  display: none;
 }
 
-.view-player .player-controls-container .controls .button-play:after {
-	box-shadow: unset !important;
+.desktoproutes-homepage-takeover-ad-hptoComponent-parentContainer,
+.desktoproutes-homepage-takeover-ad-hptoComponent-container {
+  display: none !important;
 }
 
-.view-player .player-controls-container {
-	position: absolute !important;
-	width: 100% !important;
+/* hide upgrade button */
+.main-topBar-UpgradeButton {
+  display: none;
 }
 
-.view-player .player-controls-container .controls {
-	width: 100% !important;
-	height: 100%  !important;
-	align-items: center !important;
-	margin-top : 0px !important;
+/* change input box appearance */
+input {
+  background-color: var(--spice-main-secondary) !important;
+  border-bottom: solid 1px var(--spice-text) !important;
+  border-radius: 0 !important;
+  padding: 6px 10px 6px 48px;
+  color: var(--spice-text) !important;
 }
 
-/* Add round corner for Gerne and Mood cards */
-.gc-image-container,
-.gc-image {
-	border-radius: 10px !important;
+/* remove background color from main headers */
+.main-home-homeHeader,
+.x-441-entityHeader-overlay,
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
+.main-entityHeader-backgroundColor {
+  background-color: unset !important;
+  background-image: unset !important;
 }
 
-/*
-Collage of 3 album covers is usually seen in Browse and Chart.
-*/
-.card-puff__image-wrapper,
-.card-puff__info-container,
-.card-puff__card-image {
-	border-radius: 10px !important;
+/* change playlist image shadow */
+.main-entityHeader-shadow {
+  box-shadow: 0 5px 10px rgba(var(--spice-rgb-shadow), 0.5) !important;
 }
 
-.card-puff__image-wrapper {
-  overflow: visible;
+/* change playlist image border-radius */
+.main-entityHeader-image {
+  border-radius: 10%;
 }
 
-.card-puff__card-image {
-	box-shadow: 5px 0 30px rgba(0,0,0,0.7);
-	overflow: visible;
+/* change playing icon from gif to svg */
+.main-trackList-playingIcon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='playing-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 24'%3E%3Cdefs%3E%3Cstyle%3E %23playing-icon %7B fill: %2320BC54; %7D @keyframes play %7B 0%25 %7Btransform: scaleY(1);%7D 3.3%25 %7Btransform: scaleY(0.9583);%7D 6.6%25 %7Btransform: scaleY(0.9166);%7D 9.9%25 %7Btransform: scaleY(0.8333);%7D 13.3%25 %7Btransform: scaleY(0.7083);%7D 16.6%25 %7Btransform: scaleY(0.5416);%7D 19.9%25 %7Btransform: scaleY(0.4166);%7D 23.3%25 %7Btransform: scaleY(0.25);%7D 26.6%25 %7Btransform: scaleY(0.1666);%7D 29.9%25 %7Btransform: scaleY(0.125);%7D 33.3%25 %7Btransform: scaleY(0.125);%7D 36.6%25 %7Btransform: scaleY(0.1666);%7D 39.9%25 %7Btransform: scaleY(0.1666);%7D 43.3%25 %7Btransform: scaleY(0.2083);%7D 46.6%25 %7Btransform: scaleY(0.2916);%7D 49.9%25 %7Btransform: scaleY(0.375);%7D 53.3%25 %7Btransform: scaleY(0.5);%7D 56.6%25 %7Btransform: scaleY(0.5833);%7D 59.9%25 %7Btransform: scaleY(0.625);%7D 63.3%25 %7Btransform: scaleY(0.6666);%7D 66.6%25 %7Btransform: scaleY(0.6666);%7D 69.9%25 %7Btransform: scaleY(0.6666);%7D 73.3%25 %7Btransform: scaleY(0.6666);%7D 76.6%25 %7Btransform: scaleY(0.7083);%7D 79.9%25 %7Btransform: scaleY(0.75);%7D 83.3%25 %7Btransform: scaleY(0.8333);%7D 86.6%25 %7Btransform: scaleY(0.875);%7D 89.9%25 %7Btransform: scaleY(0.9166);%7D 93.3%25 %7Btransform: scaleY(0.9583);%7D 96.6%25 %7Btransform: scaleY(1);%7D %7D %23bar1 %7B transform-origin: bottom; animation: play 0.9s -0.51s infinite; %7D %23bar2 %7B transform-origin: bottom; animation: play 0.9s infinite; %7D %23bar3 %7B transform-origin: bottom; animation: play 0.9s -0.15s infinite; %7D %23bar4 %7B transform-origin: bottom; animation: play 0.9s -0.75s infinite; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eplaying-icon%3C/title%3E%3Crect id='bar1' class='cls-1' width='4' height='24'/%3E%3Crect id='bar2' class='cls-1' x='6' width='4' height='24'/%3E%3Crect id='bar3' class='cls-1' x='12' width='4' height='24'/%3E%3Crect id='bar4' class='cls-1' x='18' width='4' height='24'/%3E%3C/svg%3E");
+  background: var(--spice-button);
+  content-visibility: hidden;
+  -webkit-mask-repeat: no-repeat;
 }
 
-.card-puff__title-container {
-	background-color: transparent !important;
+/* change appearance of 'playlist' tag  */
+.main-entityTitle-subtitle.main-entityTitle-small.main-entityTitle-uppercase.main-entityTitle-bold {
+  border: 2px var(--spice-text) solid;
+  border-radius: 3px;
+  width: fit-content;
+  display: inline;
+  text-align: center;
+  padding: 0 5px;
 }
 
-.card-puff.pressed .card-puff__image-wrapper,
-.card-puff.pressed .card-puff__info-container {
-	opacity: 0.7 !important;
+/* change scrollbar appearance */
+.os-theme-spotify.os-host-transition
+  > .os-scrollbar-vertical
+  > .os-scrollbar-track
+  > .os-scrollbar-handle {
+  border-radius: 4px;
+  width: 6px;
+  background-color: var(--spice-misc)
 }
 
-.card-puff__title {
-	padding: 5px 10px 5px 10px !important;
-	background-color: var(--modspotify_main_bg) !important;
-	border-radius: 4px;
-	border: 2px solid var(--modspotify_main_fg);
+.os-theme-spotify.os-host-transition
+  > .os-scrollbar-vertical
+  > .os-scrollbar-track {
+  width: 6px;
 }
 
-/*
-We use round corner on cover so they look weird in original
-form, so I move last cover to the right 20px and first one to the left 20px
-*/
-.card-puff__card-image:nth-child(1) {
-	right: 20px;
-	box-shadow: 0 0 0 0 !important;
+/* add border under header row */
+.main-trackList-trackListHeaderRow {
+  border-bottom: 1px solid rgba(var(--spice-rgb-button-disabled), 0.8);
 }
 
-.card-puff__card-image:nth-child(3) {
-	left: 20px;
+/* change appearance of main/topbar play-button */
+.main-playButton-PlayButton.main-playButton-primary {
+  color: var(--spice-main);
+  background-color: var(--spice-play-button);
+  box-shadow: var(--spice-shadow) 0 5px 4px 0px;
+  transition-duration: 0.15s !important;
 }
 
-.grid-overlay-label {
-	top: 140px !important;
+/* change appearance of download button */
+.x-downloadButton-button {
+  box-shadow: var(--spice-shadow) 0 5px 4px 0px;
+  background: var(--spice-player);
+  border-radius: 50%;
 }
 
-/**/
-.glue-page-header__background-color {
-	background-image: none !important;
-	background: var(--modspotify_main_bg);
+/* change text color on category cards in 'search' tab */
+a.x-categoryCard-CategoryCard, 
+a.x-heroCategoryCard-HeroCategoryCard {
+  color: var(--spice-subtext);
 }
 
-/* .glue-page-header__sticky {
-  	padding-top: 60px !important;
-} */
+/* recolor sub-buttons */
+.main-moreButton-button {
+  color: var(--spice-button-secondary);
+}
 
-/*
-Remove those title, cringy description and
-meaningless followers number
-*/
+.x-downloadButton-button {
+  color: var(--spice-button-secondary) !important;
+}
 
-.carousel .card-info-subtitle-description,
-.carousel .card-info-subtitle-metadata,
-.carousel .card:not(.card-type-station).card-info-title,
-.carousel .card.card-type-playlist.image-loaded .Card__info-subtitle-description,
-.carousel .card.card-type-playlist.image-loaded .Card__info-subtitle-metadata {
-	display: none !important;
+.x-downloadButton-button:hover {
+  color: var(--spice-text) !important;
 }
 
+.main-addButton-button {
+  color: var(--spice-button-secondary);
+}
 
-/*
-In top of Browse usually has bunch of Playlist or Album cards,
-and they has .carousel as a wrapper and it hides anything that
-overflows from its zone, aka our shadow and lifting animation.
-*/
-.carousel {
-	overflow: visible !important;
+.main-entityHeader-metaDataText {
+  color: var(--spice-button-secondary);
 }
 
-/*
-Button with text Play
-*/
-.button.button-green,
-.GlueButton.GlueButton--style-green {
-	color: var(--modspotify_main_fg) !important;
+.x-sortBox-sortDropdown {
+  background-color: var(--spice-main-secondary) !important;
 }
 
-/*
-Change text color in playlist
-*/
-.tl-explicit .label,
-.tl-premium .label,
-.tl-cell:not(.tl-number),
-.tl-cell a:link,
-.tl-highlight {
-  color: var(--modspotify_secondary_fg);
+.x-filterBox-searchIconContainer {
+  color: var(--spice-button-secondary) !important;
 }
 
-.card-type-album .card-info-title,
-.card-type-track .card-info-title,
-.card-type-collection-album .card-info-title,
-.card-type-episode .card-info-title {
-  	font-size: 15px;
-  	font-weight: 900 !important;
-	text-align: center !important;
-	width: 100% !important;
+.x-filterBox-expandButton:focus,
+.x-filterBox-expandButton:hover {
+  background-color: var(--spice-main-secondary) !important;
 }
 
-.card-type-album .card-info-subtitle-links,
-.card-type-track .card-info-subtitle-links,
-.card-type-collection-album .card-info-subtitle-links,
-.card-type-episode .card-info-subtitle-links {
-	text-align: center !important;
-	width: 100% !important;
+.x-sortBox-sortDropdown,
+.x-filterBox-expandButton {
+  color: var(--spice-text) !important;
 }
 
-.tracklist-station-container::after {
-	background: transparent !important;
+/* change background color of 'home' tab shortcut items */
+.view-homeShortcutsGrid-shortcut {
+  background-color: rgba(var(--spice-rgb-main-secondary), .3) !important;
 }
 
-.GlueHeader__background-overlay {
-	background: var(--modspotify_main_bg) !important;
+.view-homeShortcutsGrid-shortcut:focus-within,
+.view-homeShortcutsGrid-shortcut:hover,
+.view-homeShortcutsGrid-shortcut[data-context-menu-open='true'] {
+  background-color: rgba(var(--spice-rgb-main-secondary), .5) !important;
 }
 
-/* Move navigation buttons and search field to the right and down */
-.browser-navigation-top-bar {
-	margin-left: 40px !important;
-	margin-top: 15px !important;
+/* 'see more' button fix */
+
+.artist-popularTrackList-seeMore {
+  color: rgba(var(--spice-rgb-text), 0.7);
 }
 
-.SearchInput__input,
-.SearchInput__searchIcon,
-.SearchInput__clearButton {
-	margin-top: 15px !important;
+/* card background color for editing playlist details */
+.main-playlistEditDetailsModal-descriptionTextarea {
+  background: var(--spice-main-secondary);
 }
 
-.content-top-bar__profile-menu-button {
-	margin-top: 15px !important;
+.main-playlistEditDetailsModal-textElementLabel {
+  display: none;
 }
 
-.body-container--windows:not(.with-buddy-list):not(.messagebar) .content-top-bar__profile {
-	margin-right: 110px !important;
-	margin-top: -5px;
+/* change color of search icon for new playlists */
+.playlist-inlineSearchBox-searchIcon {
+  fill: var(--spice-text) !important;
 }
 
-/* Spice up Fullscreen mode */
-#view-player .album-art .album-art__image {
-	border-radius: 30px !important;
-	box-shadow: 0 10px 70px rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.5) !important;
+/* change appearance of verified artist badge */
+.artist-artistVerifiedBadge-badge {
+  border: 2px solid var(--spice-text);
+  border-radius: 3px;
+  width: fit-content;
+  text-align: center;
+  padding: 0 5px;
 }
 
-#view-player .album-art .album-art__image .card-image-content-wrapper,
-#view-player .album-art .album-art__image .card-image-content-wrapper .card-image {
-	border-radius: 30px !important;
+span.artist-artistVerifiedBadge-badge path:nth-child(1) {
+  display: none;
 }
 
-#video-player .album-art__foreground {
-	flex-direction: row;
-	text-align: left;
+span.artist-artistVerifiedBadge-badge path:last-child {
+  fill: var(--spice-text) !important;
+  stroke: var(--spice-text);
 }
 
-#video-player .album-art__background {
-	background-color: initial;
+.artist-artistVerifiedBadge-badge span {
+  font-weight: bold;
 }
 
-#video-player .album-art__track-details {
-	padding-left: 50px;
-	line-height: initial;
+/* change text color of hero card on 'library' tab */
+.main-heroCard-card a,
+.collection-collectionEntityHeroCard-descriptionContainer {
+  color: var(--spice-subtext) !important;
 }
+
+/* CONTEXT MENU */
 
-#video-player .album-art__track-title {
-	font-size: 84px;
-	margin-top: 0;
-	line-height: initial;
+
+/* change hover color when selecting in context menu */
+.main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):focus,
+.main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):hover {
+  background-color: rgba(0,0,0,.2) !important;
 }
 
-#video-player .album-art__artist-name {
-	font-size: 54px;
-	margin-top: 0;
-	line-height: initial;
+.main-contextMenu-menuItemButton[aria-expanded=true] {
+  background-color: rgba(0,0,0,.2) !important;
 }
 
-/* Daily mixes */
-.carousel .card-info-wrapper.card-info-with-description.card-info-with-metadata {
-	height: 50px !important;
+/* disabled options */
+.main-contextMenu-disabled > span {
+  color: rgba(var(--spice-rgb-text), 0.5);
 }
 
-/* Remove section divider */
-.section-divider {
-	border-bottom: 0 !important;
+/* dividers between option subgroups */
+.main-contextMenu-menuItem:not(:first-child)
+  > .main-contextMenu-dividerBefore:before {
+  border-bottom: 1px solid rgba(var(--spice-rgb-button-disabled), 0.5);
 }
 
-/* Adjust Position of border active tab in Nav bar at top
-and add little glowing effect
-*/
-.nav.navbar-nav {
-	overflow: hidden !important;
+/* confirmation box appearance fixes */
+.main-deleteFolderDialog-buttonContainer,
+.main-deletePlaylistDialog-buttonContainer {
+  justify-content: space-between !important;
 }
 
-.nav.navbar-nav a {
-	overflow: visible !important;
+.main-deletePlaylistDialog-container {
+  background-color: var(--spice-player);
 }
 
-.nav.navbar-nav a::after {
-	bottom: 0px !important;
-	width: 100% !important;
+.main-deletePlaylistDialog-container > *:not(div) {
+  color: var(--spice-text);
 }
 
-.nav.navbar-nav .active  a::after{
-	box-shadow: 0 0px 20px !important;
+.main-deletePlaylistDialog-buttonContainer > *:not(div) {
+  color: var(--spice-text);
 }
 
-.nav.navbar-nav a:focus:not(.button):active::after{
-	background-color: var(--modspotify_pressing_fg) !important;
+.main-button-primary:hover {
+  background-color: var(--spice-button);
 }
 
-/* Notification bar */
-#content-wrapper #view-message-bar {
-	position: absolute !important;
-	width: calc(100% - 160px) !important;
-	margin-left: 80px !important;
-	border-radius: 0 0 10px 10px !important;
+.main-button-primary {
+  color: white !important;
 }
 
-/* Small cover Big cover mechanism */
-.now-playing.cover-size-transition.active.image-expanded #now-playing-image-small {
-    display: none;
+/* change colors on 'duplicate track' dialog */
+.main-duplicateTracksDialog-container {
+  background-color: var(--spice-card);
+  color: var(--spice-subtext);
 }
 
-.now-playing.cover-size-transition.active.image-expanded .cover-image-link-wrapper {
-	flex: 0 1 10px;
+.main-duplicateTracksDialog-secondaryButton {
+  color: var(--spice-text);
 }
+
+/* TRACKS GRID */
+
 
-#view-now-playing a.image {
-	overflow: visible !important;
+/* change color of track titles */
+.main-trackList-rowTitle {
+  color: var(--spice-subtext);
 }
 
-/* Profile arrow in top left */
-.content-top-bar__profile-menu-button .dropdown {
-	position: fixed !important;
-    top: 10px !important;
-	-webkit-app-region: no-drag !important;
+/* change color of 'explicit' badge */
+.main-tag-container {
+  background-color: var(--spice-subtext);
 }
 
-/* [WINDOWS] Change Profile menu horizontal position */
-body.body-container--windows .content-top-bar__profile-menu-button .dropdown {
-	right: 190px !important;
+/* change background color of selected row */
+.main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover {
+  background-color: rgba(var(--spice-rgb-main-secondary), 0.6) !important;
 }
 
-body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdown {
-	right: 20px !important;
+.main-trackList-trackListRow:focus-within,
+.main-trackList-trackListRow:hover {
+  background-color: rgba(var(--spice-rgb-main-secondary), 0.4);
 }
 
-/* Small tooltip */
-#tooltip {
-	box-shadow: 0 0 10px rgba(0,0,0,0.2) !important;
-	border-radius: 5px !important;
-	border: 2px solid var(--modspotify_main_fg);
-	padding: 10px 10px;
+/* When song is currently playing */
+.main-trackList-active .main-type-mesto,
+.main-trackList-active .main-trackList-rowSubTitle,
+.main-trackList-active .main-trackList-rowSubTitle a,
+.main-trackList-active .main-trackList-rowMarker,
+.main-trackList-active .main-trackList-rowSectionVariable,
+.main-trackList-active .main-trackList-rowSectionVariable a,
+.main-trackList-active .main-trackList-rowSectionVariable span,
+.main-trackList-active .main-trackList-rowMarker,
+.main-trackList-active .main-trackList-rowDuration {
+  color: var(--spice-button) !important;
 }
 
-.tooltip-arrow-top, .tooltip-arrow-bottom {
-	display: none !important;
+.main-trackList-active .main-tag-container {
+  background-color: var(--spice-button);
 }
 
-.lyrics-lines-container,
-.message-container {
-	color: #FFFFFF !important;
+/* When song is hovered/selected */
+.main-trackList-trackListRow.main-trackList-selected:not(.main-trackList-active) 
+  .main-tag-container,
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.main-trackList-active) 
+  .main-tag-container {
+  background-color: var(--spice-text);
 }
 
-/* Home page */
-.GlueCarousel__grid-wrapper::-webkit-scrollbar-thumb {
-	display: none;
+.main-trackList-trackListRow.main-trackList-selected:not(.main-trackList-active)
+  .main-trackList-rowTitle,
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.main-trackList-active)
+  .main-trackList-rowTitle {
+  color: var(--spice-text);
 }
 
-.GlueCard__info-wrapper,
-.Card__info-wrapper {
-	margin-bottom: 30px;
+.main-trackList-trackListRow.main-trackList-selected:not(.main-trackList-active)
+  .main-trackList-rowSubTitle,
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.main-trackList-active)
+  .main-trackList-rowSubTitle {
+  color: var(--spice-text) !important;
 }
 
-.card-horizontal-interior-wrapper .card-info-  {
-	text-align: start !important;
+.main-trackList-trackListRow.main-trackList-selected:not(.main-trackList-active)
+  .main-trackList-rowSubTitle a,
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.main-trackList-active)
+  .main-trackList-rowSubTitle a {
+  color: unset !important;
 }
 
-.tl-row.selected:hover .tl-cell {
-	background: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+.main-trackList-trackListRow.main-trackList-selected:not(.main-trackList-active)
+  .main-trackList-rowSectionVariable a,
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.main-trackList-active)
+  .main-trackList-rowSectionVariable a {
+    color: var(--spice-text) !important;
 }
 
-.GlueTableRow--is-selected {
-	background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+
+/* NOTIFICATION */
+
+
+._9eb5acf729a98d62135ca21777fef244-scss {
+  color: var(--spice-card);
 }
+
+
 
-.tracklist-podcast .tl-progress .row-progress__bar {
-    background-color: #var(--modspotify_main_fg);
+/* TEMPORARY */
+
+/* change delete playlist dialog box colors */
+.K8PtC1Way9XetxDGwCGx {
+  background-color: var(--spice-card);
 }
 
-.Header__background-color{
-	background-color: var(--modspotify_main_bg) !important;
+.K8PtC1Way9XetxDGwCGx > *:not(div) {
+  color: var(--spice-text);
 }
 
-.Button--style-green,
-.button.button-green, .button.button-white {
-	/* border-radius: 4px; */
-	color: var(--modspotify_main_fg) !important;
+.awGNDbf1c8TGBAFR0pv8 > *:not(div) {
+  color: white;
 }
 
-.glue-page-header:not(.glue-page-header--album):not(.glue-page-header--playlist):not(.glue-page-header--artist):not(.glue-page-header--dailymix):not(.glue-page-header--user):not(.glue-page-header--show)
-	.glue-page-header__content-inner .glue-page-header__title-text,
-.HomeHeader .Header__content-inner .Header__title-text-inner,
-.MadeForYouHeader .Header__content-inner .Header__title-text-inner,
-.RecentlyPlayedPage__header .Header__content-inner .Header__title-text-inner {
-	background-color: var(--modspotify_main_bg);
-	/* padding: 5px 20px;
-	border: 5px solid var(--modspotify_main_fg) !important;
-	border-radius: 6px;
-	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.2); */
-	text-transform: uppercase;
+.main-deleteFolderDialog-buttonContainer,
+.reDC8RlgDXoQ_bz0umLz {
+  justify-content: space-between !important;
 }
 
-.glue-page-header.glue-page-header--album .glue-page-header__content-inner .glue-page-header__title,
-.glue-page-header.glue-page-header--artist .glue-page-header__content-inner .glue-page-header__title,
-.glue-page-header.glue-page-header--dailymix .glue-page-header__content-inner .glue-page-header__title,
-.glue-page-header.glue-page-header--playlist .glue-page-header__content-inner .glue-page-header__title {
-	margin-top: 10px;
+/* change appearance of verified artist badge */
+.Ov0avbbVFKCQwhi1UwYi {
+  border: 2px solid var(--spice-text);
+  border-radius: 3px;
+  width: fit-content;
+  text-align: center;
+  padding: 0 5px;
 }
 
-span.glue-page-header__title-text {
-	color: var(--modspotify_main_fg);
+span.Ov0avbbVFKCQwhi1UwYi path:nth-child(1) {
+  display: none;
 }
 
-.glue-page-header .glue-page-header__content-inner .glue-page-header__button {
-	margin-top: 40px;
+span.Ov0avbbVFKCQwhi1UwYi path:last-child {
+  fill: var(--spice-text) !important;
+  stroke: var(--spice-text);
 }
 
-.glue-page-header__content-inner,
-.glue-page-header__data,
-.glue-page-header__title,
-.Header__content-inner,
-.Header__data,
-.Header__title,
-.Header__title-text,
-.Header__title-text-inner {
-	overflow: visible !important;
+.Ov0avbbVFKCQwhi1UwYi span {
+  font-weight: bold;
 }
 
-/*Force player bar to has fixed height*/
-.view-player {
-	height: var(--bar-height) !important;
-	border-top: 0;
+/* change progress bar color */
+.epWhU7hHGktzlO_dop6z {
+  background-color: var(--spice-playback-bar) !important;
 }
 
-.view-player .now-playing {
-	overflow: unset;
+.player-controls__buttons.player-controls__buttons--new-icons div svg{
+  width: 14px;
+  height: 14px;
 }
 
-.view-player .cover-image-container {
-	position: fixed !important;
-	left: 0;
-	bottom: 0;
+.fGLwlk:active .ButtonInner-sc-14ud5tc-0,
+.fGLwlk:hover .ButtonInner-sc-14ud5tc-0  {
+  background-color: var(--spice-play-button);
 }
 
-.view-player .now-playing .cover-image-link,
-.view-player .now-playing .cover-image-link figure {
-	width: var(--bar-height);
-	height: var(--bar-height);
+span.ellipsis-one-line.main-type-mestoBold {
+  font-weight: 700;
+  font-size: 0.875rem;
 }
 
-#now-playing-image-small .cover-image {
-    width: var(--bar-height);
-    height: var(--bar-height);
+.UyzJidwrGk3awngSGIwv {
+  color: inherit;
 }
 
-.view-player .now-playing .cover-image-link-wrapper {
-	flex: 0 1 calc(var(--bar-height) + 8px);
+.fcehhQ {
+  color: inherit;
 }
 
-.text-container {
-	z-index: 3;
+.icon.collection-icon svg {
+  stroke: var(--spice-subtext);
+  stroke-width: 10px;
 }
 
-.view-player .now-playing-container .button-add {
-	color: var(--modspotify_main_fg) !important;
+:hover > .icon.collection-icon svg {
+  stroke: var(--spice-button-secondary);
+  stroke-width: 10px;
 }
-/*
-.progress-container .progress-bar,
-.progress-container .inner {
-	top: 0 !important;
-	margin-top: 0 !important;
-	height: 5px;
+
+.wCl7pMTEE68v1xuZeZiB,
+._bjbHn5TABOW2s5LsEGX,
+.HbKLiGoYM4dpuK8L4TMX,
+.w6j_vX6SF5IxSXrrkYw5  {
+  color: var(--spice-button-secondary);
 }
 
-.progress-container .progress-bar-wrapper {
-	top: 0 !important;
-	height: 5px;
+.bRkxrs {
+  color: var(--spice-subtext);
 }
-*/
-.progress-container {
-	/*position: fixed !important;*/
-	width: 55% !important;
-	/*bottom: var(--bar-height) !important;*/
-	/*margin : 0 !important;*/
-	margin-left: auto;
-	margin-right: auto;
-	background-color:
+
+.x-sortBox-sortDropdown {
+  background-color: var(--spice-main-secondary) !important;
 }
 
-.glue-page-header__p2s-details,
-.glue-page-header__p2s-followers {
-	display: none;
+.Z35BWOA10YGn5uc9YgAp:focus-within,
+.Z35BWOA10YGn5uc9YgAp:hover,
+.Z35BWOA10YGn5uc9YgAp[data-context-menu-open='true'] {
+  background-color: rgba(var(--spice-rgb-main-secondary), 1) !important;
 }
 
-.context-menu {
-	border: 2px solid var(--modspotify_main_fg);
-	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.2);
-	border-radius: 7px !important;
-	overflow: hidden;
+.Z35BWOA10YGn5uc9YgAp {
+  background-color: rgba(var(--spice-rgb-main-secondary), 0.5) !important;
 }
 
-#menu-wrapper ::-webkit-scrollbar {
-	display: none;
+.main-card-card:hover, .main-card-card[data-context-menu-open=true] {
+  background-color: rgba(var(--spice-rgb-main), 1) !important;
 }
 
-#menu-wrapper {
-	border-right: 3px solid black;
-    border-image: linear-gradient(0deg, transparent , var(--modspotify_scrollbar_fg_and_selected_row_bg) 40%, var(--modspotify_scrollbar_fg_and_selected_row_bg) 60%, transparent 90%) 2 90%;
+.main-card-card {
+  background-color: rgba(var(--spice-rgb-main), 0.5) !important;
 }
 
-.main-view-wrapper {
-	overflow: unset;
+.CbHJjxYxldG7uUPMYMaP {
+  background-color: rgba(var(--spice-rgb-main-secondary), 1) !important;
 }
 
-.Button--style-icon-stroke:after,
-.Button--style-icon-stroke:hover:after,
-.Button--style-icon-stroke,
-.glue-page-header__button .button-icon-with-stroke,
-.glue-page-header__button .button-icon-with-stroke::after {
-	box-shadow: unset;
+.Z35BWOA10YGn5uc9YgAp {
+  transition: none;
 }
 
-.glue-page-header.glue-page-header--artist .glue-page-header__label {
-	padding-top: 10px;
+.n87ifzfQlmGX8vkeYGDL {
+  background-color: rgba(var(--spice-rgb-main), 1) !important;
 }
 
-.glue-page-header.glue-page-header--artist.has-custom-image .glue-page-header__label {
-	padding-top: 8px;
+.main-card-card {
+  transition: none;
 }
 
-.glue-page-header__content .glue-page-header__label {
-	margin-left: -2px;
-	z-index: 2;
+img.main-image-image.CmkY1Ag0tJDfnFXbGgju.main-entityHeader-shadow {
+  border-radius: 7%;
 }
 
-/* .glue-page-header__label span,
-.Header__label span {
-	background-color: var(--modspotify_main_fg);
-    color: var(--modspotify_main_bg);
-    padding: 2px 10px;
-} */
+/* change appearance of 'playlist' tag  */
+.main-entityHeader-subtitle.main-entityHeader-small.main-entityHeader-uppercase.main-entityHeader-bold {
+  border: 2px var(--spice-text) solid;
+  border-radius: 3px;
+  width: fit-content;
+  display: inline;
+  text-align: center;
+  padding: 3px 7px;
+}
 
-.glue-page-header__label .header-verified-check {
-	background-color: transparent;
+.main-topBar-topbarContent span.IconWrapper__Wrapper-sc-1hf1hjl-0.jWeDTW {
+  top: 9px;
+  left: 9px;
 }
 
-body.remotebar .view-player .player-bar-wrapper {
-	height: 100%;
+.main-topBar-topbarContent span.IconWrapper__Wrapper-sc-1hf1hjl-0.jWeDTW svg {
+  height: 20px;
+  width: 20px;
 }
 
+.main-topBar-topbarContent .ButtonInner-sc-14ud5tc-0.cSeieV.encore-bright-accent-set {
+  width: 38px;
+  height: 38px;
+}
 
-.Header__image-inner {
-	box-shadow: unset;
+.x-progressBar-progressBarBg, .w699O0LgQRghXyl3bs9u {
+  border-radius: 0;
+  --bg-color: var(--spice-main) !important;
 }
