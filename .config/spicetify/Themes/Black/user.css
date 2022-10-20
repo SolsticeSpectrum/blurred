@@ -266,18 +266,42 @@ p.main-buddyFeed-timestamp.main-type-finale,
   display: none;
 }
 
-.WiPggcPDzbwGxoxwLWFf.contentSpacing {
+.sponsor-container {
+  display: none !important;
+}
+
+.ReyA3uE3K7oEz7PTTnAn,
+.X871RxPwx9V0MqpQdMom,
+.WiPggcPDzbwGxoxwLWFf,
+.DHeG1dij5qSIc9nr0wDj,
+.hx2D0g_ursHte5bm62U2 {
   display: none;
 }
 
-.desktoproutes-homepage-takeover-ad-hptoComponent-parentContainer,
-.desktoproutes-homepage-takeover-ad-hptoComponent-container {
+.desktoproutes-homepage-takeover-ad-hptoComponent-parentContainer {
   display: none !important;
 }
 
 /* hide upgrade button */
-.main-topBar-UpgradeButton {
+.main-topBar-UpgradeButton,
+.Button-y0gtbx-0[aria-label="Upgrade to Premium"] {
   display: none;
+}
+
+.upgrade-button, button[data-menu-item="upgrade-account"], .main-contextMenu-menuItem a[href="https://www.spotify.com/premium/"], button[id="upgradeAccount"] {
+  display: none !important;
+}
+
+.Qt5xfSWikz6CLU8Vobxs[aria-label="Upgrade to Premium"] {
+  display: none !important;
+}
+
+.DuEPSADpSwCcO880xjUG a[href="https://www.spotify.com/premium/"] {
+  display: none !important;
+}
+
+.main-buttons-button[title="Upgrade to Premium"] {
+  display: none !important;
 }
 
 /* change input box appearance */
