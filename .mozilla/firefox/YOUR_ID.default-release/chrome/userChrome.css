@@ -141,7 +141,18 @@ menupopup  {
   color: #000000 !important;
 }
 
-#identity-box,
+.identity-box-button  {
+  background: none !important;
+}
+
+.identity-box-button:hover  {
+  background: #3d3d3e !important;
+}
+
+.identity-icon-label  {
+  display: none !important;
+}
+
 #tracking-protection-icon-container,
 #urlbar-background  {
   display: none !important;
@@ -198,4 +209,12 @@ window,
 
 #tabbrowser-tabpanels  {
   background-color: #ffffff !important;
+}
+
+.checkbox-check[checked="true"]  {
+  background-color: #8f5cd6 !important;
+}
+
+#checkbox[checked="true"]  {
+  background-color: #8f5cd6 !important;
 }
