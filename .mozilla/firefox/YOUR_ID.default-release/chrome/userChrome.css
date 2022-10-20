@@ -211,6 +211,22 @@ window,
   background-color: #ffffff !important;
 }
 
+#editBookmarkPanelDoneButton  {
+  background: #424243 !important;
+}
+
+#editBookmarkPanelDoneButton:hover  {
+  background: #4a4a4c !important;
+}
+
+.popup-notification-button.popup-notification-primary-button  {
+  background: #424243 !important;
+}
+
+.popup-notification-button.popup-notification-primary-button:hover  {
+  background: #4a4a4c !important;
+}
+
 .checkbox-check[checked="true"]  {
   background-color: #8f5cd6 !important;
 }
