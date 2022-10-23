@@ -270,14 +270,23 @@ p.main-buddyFeed-timestamp.main-type-finale,
   display: none !important;
 }
 
-.ReyA3uE3K7oEz7PTTnAn,
+.ReyA3uE3K7oEz7PTTnAn {
+  display: none !important;
+}
+
 .MnW5SczTcbdFHxLZ_Z8j,
-.X871RxPwx9V0MqpQdMom,
-.WiPggcPDzbwGxoxwLWFf,
-.DHeG1dij5qSIc9nr0wDj,
-.hx2D0g_ursHte5bm62U2,
 a.link-subtle.main-navBar-navBarLink.GKnnhbExo0U9l7Jz2rdc {
   display: none !important;
+}
+
+.X871RxPwx9V0MqpQdMom {
+  display: none !important;
+}
+
+.WiPggcPDzbwGxoxwLWFf,
+.DHeG1dij5qSIc9nr0wDj,
+.hx2D0g_ursHte5bm62U2 {
+  display: none;
 }
 
 .desktoproutes-homepage-takeover-ad-hptoComponent-parentContainer {
