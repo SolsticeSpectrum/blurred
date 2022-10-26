@@ -20,7 +20,7 @@ bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
 exec --no-startup-id polybar mybar -r
-exec --no-startup-id picom -b -f --experimental-backends --transparent-clipping
+exec --no-startup-id picom -b -f --transparent-clipping
 exec --no-startup-id numlockx
 exec --no-startup-id setxkbmap -layout cz,us -option grp:alt_shift_toggle
 
@@ -72,9 +72,10 @@ bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print exec --no-startup-id flameshot gui
+bindsym Shift+Print --release exec --no-startup-id flameshot gui
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+# bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $mod+Shift+Print --release exec --no-startup-id peek
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
