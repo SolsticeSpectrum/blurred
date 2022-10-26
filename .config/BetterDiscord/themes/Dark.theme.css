@@ -55,8 +55,8 @@
    --profile-message-input-border-color: #0c0c0c !important;
    --profile-note-background-color: #0c0c0c !important;
    --account-profile-popout-menu-hover: none !important;
-   --profile-role-pill-background-color: none !important;
-   --profile-role-pill-border-color: none !important;
+   --profile-role-pill-background-color: #0c0c0c !important;
+   --profile-role-pill-border-color: #0c0c0c !important;
 }
 
 .scroller-kQBbkU::-webkit-scrollbar-thumb {
@@ -103,6 +103,11 @@
     background: #000000 !important;
 }
 
+.authBoxExpanded-AN2aH1.authBox-1HR6Ha.theme-light.card-14SgW5 { 
+    background: #000000 !important;
+}
+
+
 .inputDefault-3FGxgL.input-2g-os5.inputField-2RZxdl {
     background: #0c0c0c !important;
 }
@@ -112,6 +117,10 @@
 }
 
 .theme-dark.navRow-dG-XX8 {
+    background: #000000 !important;
+}
+
+.theme-light.navRow-dG-XX8 {
     background: #000000 !important;
 }
 
@@ -200,7 +209,11 @@
     background: #000000 !important;
 }
 
-.theme-dark .root-g14mjS {
+.theme-dark.root-g14mjS {
+    background: #000000;
+}
+
+.theme-light.root-g14mjS {
     background: #000000;
 }
 
@@ -208,7 +221,11 @@
     background: #000000;
 }
 
-.theme-dark .footer-31IekZ {
+.theme-dark.footer-31IekZ {
+    background: #000000;
+}
+
+.theme-light.footer-31IekZ {
     background: #000000;
 }
 
@@ -424,6 +441,10 @@
     background: #000000 !important;
 }
 
+.authBox-1HR6Ha.theme-light.card-14SgW5 {
+    background: #000000 !important;
+}
+
 .button-TGAkj4.button-f2h6uQ.lookFilled-yCfaCM.colorPrimary-2AuQVo.buttonSize-dIiz43.grow-2sR_-F {
     background: #0c0c0c !important;
 }
@@ -434,6 +455,10 @@
 
 .member-perms.root-jbEB5E.flex-3BkGQD.wrap-7NZuTn.roles-3zC7MX::-webkit-scrollbar-thumb {
     background-color: #ffffff !important;
+}
+
+.member-perm.role-2TIOKu.flex-3BkGQD.alignCenter-14kD11.rolePill-2Lo5dd {
+    background: #0c0c0c !important;
 }
 
 .role-side {
