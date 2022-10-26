@@ -44,6 +44,19 @@
    --toast-border: var(--background-tertiary) !important;
    --scrollbar-thin-thumb: #ffffff !important;
    --scrollbar-thin-track: #000000 !important;
+   --profile-gradient-primary-color: #000000 !important;
+   --profile-gradient-secondary-color: #000000 !important;
+   --profile-gradient-button-color: #0c0c0c !important;
+   --profile-gradient-overlay-color: none !important;
+   --profile-body-background-color: none !important;
+   --profile-body-background-hover: none !important;
+   --profile-body-divider-color: none !important;
+   --profile-avatar-border-color: none !important;
+   --profile-message-input-border-color: #0c0c0c !important;
+   --profile-note-background-color: #0c0c0c !important;
+   --account-profile-popout-menu-hover: none !important;
+   --profile-role-pill-background-color: none !important;
+   --profile-role-pill-border-color: none !important;
 }
 
 .scroller-kQBbkU::-webkit-scrollbar-thumb {
@@ -417,4 +430,28 @@
 
 .scroller-3oxliS.thin-31rlnD.scrollerBase-_bVAAt {
     background: #000000 !important;
+}
+
+.member-perms.root-jbEB5E.flex-3BkGQD.wrap-7NZuTn.roles-3zC7MX::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
+}
+
+.role-side {
+    background: #000000 !important;
+}
+
+.perm-side {
+    background: #000000 !important;
+}
+
+.header {
+    background: #000000 !important;
+}
+
+.perm-scroller::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
+}
+
+.role-scroller::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
 }
